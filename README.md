@@ -6,7 +6,8 @@ folder.
 
 GUI and URL installs:
 
-- A simple desktop GUI is available (requires `PySide6`). Run:
+- A simple desktop GUI is available, use the terminal or run the executable.
+ (requires `PySide6`). Run:
 
         python.exe -m addon_manager.gui
 
@@ -34,3 +35,4 @@ Notes:
 - You can also install an addon directly from a GitHub repo URL; the manager
     will attempt to download the repo's zip for `main` or `master`, or accept a
     direct .zip URL.
+
