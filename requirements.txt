@@ -1,0 +1,7 @@
+# Runtime dependencies
+requests>=2.25.0
+PySide6>=6.0.0
+
+# Development and build dependencies
+pytest>=6.0.0
+pyinstaller>=5.0.0
