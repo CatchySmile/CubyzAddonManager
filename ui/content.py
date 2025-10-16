@@ -89,6 +89,7 @@ strong {
 </div>
 
 <h2>Quick Start</h2>
+<p>Place this Executable in the same folder as the Cubyz executable.</p>
 <p>Addons are folders placed inside the game's <code>assets</code> directory. They can contain:</p>
 <ul>
     <li><code>blocks/</code> — Custom block definitions</li>
@@ -113,7 +114,7 @@ strong {
 <ol>
     <li>Click <strong>Install from URL</strong></li>
     <li>Paste a GitHub repository URL:<br>
-        <code>https://github.com/owner/repo</code></li>
+        <code>https://github.com/CatchySmile/CubyzAddonManager</code></li>
     <li>The manager will download the latest version automatically</li>
 </ol>
 
