@@ -1,10 +1,14 @@
 # Cubyz Addon Manager
 
 Small Python addon manager for Cubyz. It supports listing, installing
-and uninstalling addons by copying/extracting them into your game's `assets/`
+and uninstalling addons, and browsing addons by copying/extracting them into your game's `assets/`
 folder.
 
-Usage examples:
+GUI and URL installs:
+
+- A simple desktop GUI is available (requires `PySide6`). Run:
+
+        python.exe -m addon_manager.gui
 
 Install from a folder (will copy):
 
@@ -26,12 +30,6 @@ Notes:
 - Addons are simple folders that may contain subfolders like `blocks`, `items`,
   `biomes`, `recipes`, and `textures`. A recommended metadata file is
   `addon.json` with fields like `name` and `version`.
-
-GUI and URL installs:
-
-- A simple desktop GUI is available (requires `PySide6`). Run:
-
-        C:/Users/Sam/Desktop/Cubyz/.venv/Scripts/python.exe -m addon_manager.gui
 
 - You can also install an addon directly from a GitHub repo URL; the manager
     will attempt to download the repo's zip for `main` or `master`, or accept a
