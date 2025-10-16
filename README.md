@@ -8,7 +8,6 @@ A comprehensive Python addon manager for Cubyz that supports listing, installing
 - **Online Browser**: Discover and install addons from the online repository
 - **Safety Features**: Protected default assets with addon locking system
 - **CLI & Terminal**: Both GUI and command-line interfaces available
-- **Smart Detection**: Automatically finds your game's assets folder
 - **Update Management**: Track addon versions and manage updates
 
 ## Quick Start
@@ -234,3 +233,4 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 **Happy Testing!** 
 
 Explore, create, and share amazing addons for Cubyz!
+
