@@ -4,7 +4,9 @@ Small Python addon manager for Cubyz. It supports listing, installing
 and uninstalling addons, and browsing addons by copying/extracting them into your game's `assets/`
 folder. 
 
+## Quick start
 - Because this was made with python, the compiled executable is quite large. in order for a standalone executable we rely on pre-packaged imports.
+- Place the Executable in the same folder as the Cubyz executable.
 
 GUI and URL installs:
 
@@ -13,6 +15,7 @@ GUI and URL installs:
 
         python.exe -m addon_manager.gui
 
+## Usage
 Install from a folder (will copy):
 
     python -m addon_manager.core install path/to/addon --assets "C:\\Path\\To\\Game\\assets"
@@ -37,5 +40,6 @@ Notes:
 - You can also install an addon directly from a GitHub repo URL; the manager
     will attempt to download the repo's zip for `main` or `master`, or accept a
     direct .zip URL.
+
 
 
