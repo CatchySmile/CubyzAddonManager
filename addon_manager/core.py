@@ -125,7 +125,7 @@ def install_addon(zip_path: Path, assets_root: Path, overwrite: bool = False) ->
     raise ValueError("Unsupported addon source: must be a folder or a .zip file")
 
 
-def install_addon_from_url(url: str, assets_root: Path, overwrite: bool = False) -> Path:
+def install_addon_from_url(url: str,name:str, assets_root: Path, overwrite: bool = False) -> Path:
     """Download an addon from a URL (supports zip files or GitHub repo URLs) and install it.
 
     Returns the installed folder Path.
@@ -138,7 +138,7 @@ def install_addon_from_url(url: str, assets_root: Path, overwrite: bool = False)
     if url.lower().endswith('.zip'):
         r = requests.get(url, stream=True)
         r.raise_for_status()
-        tf = Path(tempfile.gettempdir()) / (Path(url).stem + '.zip')
+        tf = Path(tempfile.gettempdir()) / (name + '.zip')
         with open(tf, 'wb') as f:
             for chunk in r.iter_content(chunk_size=8192):
                 if chunk:
@@ -164,7 +164,7 @@ def install_addon_from_url(url: str, assets_root: Path, overwrite: bool = False)
     r.raise_for_status()
     ct = r.headers.get('content-type', '')
     if 'zip' in ct or url.lower().endswith('.zip'):
-        tf = Path(tempfile.gettempdir()) / (Path(urlparse(url).path).stem + '.zip')
+        tf = Path(tempfile.gettempdir()) / (name + '.zip')
         with open(tf, 'wb') as f:
             for chunk in r.iter_content(chunk_size=8192):
                 if chunk:

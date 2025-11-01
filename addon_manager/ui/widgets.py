@@ -109,7 +109,7 @@ class BrowserAddonCard(QtWidgets.QWidget):
         """Install the addon from the online repository"""
         try:
             # Construct the full download URL
-            base_url = "https://addons.ashframe.net/"
+            base_url = "https://addons.ashframe.net"
             download_url = base_url + self.addon_data['fileUrl']
 
             # Show progress dialog
@@ -118,7 +118,8 @@ class BrowserAddonCard(QtWidgets.QWidget):
             progress.show()
             
             # Install from URL
-            install_addon_from_url(download_url, self.parent_window.assets, overwrite=True)
+            name = self.addon_data["name"]
+            install_addon_from_url(download_url, name,self.parent_window.assets, overwrite=True)
             
             progress.close()
             
