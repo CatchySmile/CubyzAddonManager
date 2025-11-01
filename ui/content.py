@@ -160,7 +160,7 @@ strong {
     <li><strong>GitHub download fails:</strong> Ensure the repository is public</li>
     <li><strong>Addon doesn't work:</strong> Check the game logs and verify your JSON files are valid</li>
     <li><strong>Browser shows wrong status:</strong> Click Refresh in the Browse tab</li>
-    <li><strong>Need more control:</strong> Use the command-line interface in the addon_manager folder</li>
+    <li><strong>Need more control:</strong> Use the command-line interface in the CubyzAddonManager folder</li>
 </ul>
 
 <div class="info-box">

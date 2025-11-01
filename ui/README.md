@@ -52,8 +52,8 @@ ui/
 ## Usage
 
 The main GUI can be launched through:
-- `python -m addon_manager.gui`
-- `from addon_manager.ui.main_window import run_gui; run_gui()`
+- `python -m CubyzAddonManager.gui`
+- `from CubyzAddonManager.ui.main_window import run_gui; run_gui()`
 
 For building executables, use the build script in the project root:
 - `python build_addon_manager.py exe`

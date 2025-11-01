@@ -1,4 +1,4 @@
-from addon_manager import core
+from CubyzAddonManager import core
 from pathlib import Path
 import tempfile
 

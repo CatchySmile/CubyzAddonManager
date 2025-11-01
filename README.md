@@ -24,10 +24,10 @@ If you prefer to run from source:
 pip install PySide6 requests
 
 # Run the GUI
-python -m addon_manager.gui
+python -m CubyzAddonManager.gui
 
 # Or use the command line
-python -m addon_manager.core --help
+python -m CubyzAddonManager.core --help
 ```
 
 ## Preview
@@ -69,22 +69,22 @@ python -m addon_manager.core --help
 
 ```bash
 # List installed addons
-python -m addon_manager.core list
+python -m CubyzAddonManager.core list
 
 # Install from local file or folder
-python -m addon_manager.core install path/to/addon.zip
+python -m CubyzAddonManager.core install path/to/addon.zip
 
 # Install from GitHub URL
-python -m addon_manager.core install https://github.com/owner/repo
+python -m CubyzAddonManager.core install https://github.com/owner/repo
 
 # Install with custom assets path
-python -m addon_manager.core install addon.zip --assets "C:\Path\To\Game\assets"
+python -m CubyzAddonManager.core install addon.zip --assets "C:\Path\To\Game\assets"
 
 # Uninstall an addon
-python -m addon_manager.core uninstall addon-name
+python -m CubyzAddonManager.core uninstall addon-name
 
 # Install with overwrite (replace existing)
-python -m addon_manager.core install addon.zip --overwrite
+python -m CubyzAddonManager.core install addon.zip --overwrite
 ```
 
 ## Addon Structure
@@ -160,7 +160,7 @@ my_addon/
 
 **Need more control:**
 - Use the command-line interface for advanced options
-- Check the `addon_manager` folder for additional tools
+- Check the `CubyzAddonManager` folder for additional tools
 
 ### Getting Help
 
@@ -193,13 +193,14 @@ my_addon/
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd cubyz-addon-manager
+cd CubyzAddonManager
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Run the application
-python -m addon_manager.gui
+cd ..
+python -m CubyzAddonManager.gui
 ```
 
 ### Running Tests
@@ -208,7 +209,7 @@ python -m addon_manager.gui
 python -m pytest
 
 # Run specific test file
-python -m pytest addon_manager/tests/test_core.py
+python -m pytest CubyzAddonManager/tests/test_core.py
 ```
 
 ### Building Executable

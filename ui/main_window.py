@@ -302,12 +302,13 @@ class MainWindow(QtWidgets.QMainWindow):
         
         try:
             # Fetch addon data directly (simplified approach)
-            url = "https://addons.ashframe.net/addons.json"
+            url = "https://addons.ashframe.net/api/addons"
             response = requests.get(url, timeout=10)
             response.raise_for_status()
             
             addons_data = response.json()
-            self.display_addons(addons_data)
+
+            self.display_addons(addons_data["addons"])
             
         except requests.exceptions.RequestException as e:
             self.display_error(f"Network error: {str(e)}")
@@ -334,7 +335,14 @@ class MainWindow(QtWidgets.QMainWindow):
             return
         
         # Add addon cards
-        for addon_data in addons_data:
+        for addon_data_primitive in addons_data:
+            #query more details
+            url = "https://addons.ashframe.net/api/addons/"+str(addon_data_primitive["id"])
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            
+            addon_data = response.json()["addon"]
+
             addon_card = BrowserAddonCard(addon_data, self)
             self.browser_cards.append(addon_card)
             self.browser_layout_inner.addWidget(addon_card)
