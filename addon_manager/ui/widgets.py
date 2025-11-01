@@ -74,17 +74,18 @@ class BrowserAddonCard(QtWidgets.QWidget):
     def update_install_status(self):
         """Update the install button status based on whether addon is installed"""
         # Check if this addon is already installed - fix case sensitivity issue
+        
         installed_addons = list_installed(self.parent_window.assets)
-        addon_id = self.addon_data['id'].lower()
+        # addon_id = self.addon_data['id']
         
         # Check multiple possible name variations
         possible_names = [
-            addon_id,
             self.addon_data['name'].lower().replace(' ', '_'),
             self.addon_data['name'].lower().replace(' ', ''),
-            self.addon_data['download'].split('/')[-1].replace('.zip', '').lower()
         ]
         
+        #TODO: i have no idea what is going on here?
+        # is this even needed anymore?
         is_installed = any(
             addon.name.lower() in possible_names or 
             any(name in addon.name.lower() for name in possible_names)
@@ -109,8 +110,8 @@ class BrowserAddonCard(QtWidgets.QWidget):
         try:
             # Construct the full download URL
             base_url = "https://addons.ashframe.net/"
-            download_url = base_url + self.addon_data['download']
-            
+            download_url = base_url + self.addon_data['fileUrl']
+
             # Show progress dialog
             progress = QtWidgets.QProgressDialog("Downloading addon...", "Cancel", 0, 0, self)
             progress.setWindowModality(QtCore.Qt.WindowModality.WindowModal)
