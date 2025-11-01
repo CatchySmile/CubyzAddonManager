@@ -1,7 +1,7 @@
 import sys
 import os
 
-# Add the parent directory to the path so we can import addon_manager modules
+# Add the parent directory to the path so we can import CubyzAddonManager modules
 if getattr(sys, 'frozen', False):
     # Running as compiled exe
     application_path = os.path.dirname(sys.executable)
@@ -11,7 +11,8 @@ else:
     application_path = os.path.dirname(os.path.abspath(__file__))
     sys.path.insert(0, os.path.dirname(application_path))
 
-from addon_manager.ui.main_window import run_gui
+
+from CubyzAddonManager.ui.main_window import run_gui
 
 
 def main():
